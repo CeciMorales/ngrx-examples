@@ -1,0 +1,12 @@
+<app-header>
+</app-header>
+
+<!-- * async porque recuerda que showloading es observable -->
+<app-loading-spinner *ngIf="showLoading | async">
+</app-loading-spinner>
+
+<app-alert-message *ngIf="errorMessage | async as error" [error]="error">
+</app-alert-message>
+
+<router-outlet>
+</router-outlet>

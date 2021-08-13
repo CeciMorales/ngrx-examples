@@ -1,0 +1,111 @@
+<div>
+    <h2 mat-dialog-title *ngIf="post === null">Create new post</h2>
+    <h2 mat-dialog-title *ngIf="post !== null">Edit post</h2>
+</div>
+
+<mat-dialog-content>
+    <form [formGroup]="postForm" class="example-form">
+        
+        <mat-form-field class="example-full-width" *ngIf="post === null">
+            <input 
+                matInput 
+                placeholder="title"
+                formControlName="title" 
+                type="text" 
+                required
+            />       
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post !== null">
+            <input 
+                matInput 
+                [ngModel]="post.title"
+                formControlName="title" 
+                type="text" 
+                required
+            />       
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post === null">
+            <textarea 
+                matInput 
+                formControlName="description" 
+                type="text" 
+                placeholder="description" 
+                required>
+            </textarea>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" *ngIf="post !== null">
+            <textarea 
+                matInput 
+                formControlName="description" 
+                [ngModel]="post.description"
+                type="text" 
+                required>
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post === null || post.hashtags === undefined">
+            <textarea 
+                matInput 
+                formControlName="hashtags" 
+                type="text" 
+                placeholder="hashtags">
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post !== null && post.hashtags !== undefined">
+            <textarea 
+                matInput 
+                formControlName="hashtags" 
+                type="text" 
+                [ngModel]="post.hashtags!.join(', ')">
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post === null || post.image === undefined">
+            <input 
+                matInput 
+                formControlName="image" 
+                type="text" 
+                placeholder="image URL"
+            /> 
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" *ngIf="post !== null && post.image !== undefined">
+            <input 
+                matInput 
+                formControlName="image" 
+                type="text" 
+                [ngModel]="post.image"
+            /> 
+        </mat-form-field>
+
+    </form>
+    
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="true">Cancel</button>
+    <div>
+        <button *ngIf="post === null"
+            type="submit" 
+            mat-raised-button color="primary" 
+            mat-dialog-close="false" 
+            (click)="addPost()"
+            [disabled]="!postForm.valid"
+            >Add
+        </button>
+
+        <button *ngIf="post !== null"
+            type="submit" 
+            mat-raised-button color="primary" 
+            mat-dialog-close="false" 
+            (click)="editPost()"
+            [disabled]="!postForm.valid"
+            >Edit
+        </button>
+    </div>
+</mat-dialog-actions>

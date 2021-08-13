@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "a",
+      "description": "b",
+      "hashtags": [],
+      "image": "",
+      "author": "test@test.com",
+      "likes": [],
+      "dislikes": [],
+      "comments": [],
+      "creationDate": "2021-07-06T19:12:46.034Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "d42ce90b-2ab5-4df8-b8c6-861ef53a1e8b",
+      "author": "2",
+      "description": "description comment 1",
+      "likes": [],
+      "dislikes": [],
+      "creationDate": "10/06/2021"
+    },
+    {
+      "id": "04615b29-1663-4526-b9f4-e80f59c1fd9a",
+      "author": "1",
+      "description": "description comment 2",
+      "likes": [],
+      "dislikes": [],
+      "creationDate": "10/06/2021",
+      "comments": []
+    }
+  ],
+  "profiles": [
+    {
+      "id": "14539713-9c78-4235-a7ec-1002dcb0a236",
+      "name": "Ceci Morales",
+      "email": "cecimoar@hotmail.com",
+      "password": "123",
+      "type": "regular",
+      "profileImage": "https://www.hola.com/imagenes/estar-bien/20200831174373/razas-de-perro-mas-populares-pug-carlino/0-860-24/pug-m.jpg",
+      "headerImage": "https://img.chilango.com/2019/10/5ta-reunio%CC%81n-masiva-de-pugs-1024x576.jpg",
+      "description": "hi i'm Ceci",
+      "followers": [
+        2
+      ],
+      "following": [
+        2
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": "28c934e4-14a6-4748-b706-cf1f8fefe5d3",
+      "name": "Rosi Miranda",
+      "email": "rosimiranda@hotmail.com",
+      "password": "123",
+      "type": "regular",
+      "profileImage": "https://www.hola.com/imagenes/estar-bien/20200831174373/razas-de-perro-mas-populares-pug-carlino/0-860-24/pug-m.jpg",
+      "headerImage": "https://img.chilango.com/2019/10/5ta-reunio%CC%81n-masiva-de-pugs-1024x576.jpg",
+      "description": "hi i'm Rosi",
+      "followers": [
+        1
+      ],
+      "following": [
+        1
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": "1kxS5l4DAJZ3K7e99YE5wmBJLRf2",
+      "type": "",
+      "firstName": "",
+      "lastName": "",
+      "username": "",
+      "description": "",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTCwy-0RHLsWWOuC1INPGwHsWjvwbzwAANLSiuieHvRHqyNLR8ascGumCmiS18Rp_bBIY&usqp=CAU",
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS1YqGmmqsmuUUZwRKsC05bBysXjlIgl38Gw&usqp=CAU",
+      "followers": [],
+      "following": [],
+      "savedPosts": []
+    }
+  ]
+}

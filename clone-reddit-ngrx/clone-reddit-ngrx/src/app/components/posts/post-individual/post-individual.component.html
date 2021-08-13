@@ -1,0 +1,16 @@
+<mat-card class="example-card" *ngIf="post$ | async as postData">
+    <mat-card-header >
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{postData.title}}</mat-card-title>
+        <mat-card-subtitle>{{postData.author}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+        <p>
+            {{postData.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <app-post-primary-actions></app-post-primary-actions>
+    </mat-card-actions>
+</mat-card>

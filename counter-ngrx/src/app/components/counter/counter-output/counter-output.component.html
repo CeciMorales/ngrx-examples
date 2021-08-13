@@ -1,0 +1,7 @@
+<div>
+    <h3>counter is: {{counter}}</h3>
+    <h3>counter service: {{counterS}}</h3>
+    <h3>counter store {{counterStore}}</h3>
+    <!-- * se agrega ! cuando es possibly null -->
+    <h3>counter store observable {{ (counter$ | async)!.counter }}</h3>
+</div>

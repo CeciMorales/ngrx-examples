@@ -1,0 +1,5 @@
+<mat-card *ngIf = "!(isAuthenticated | async)">
+    <mat-card-actions>
+        <app-welcome-actions></app-welcome-actions>
+    </mat-card-actions>
+</mat-card>

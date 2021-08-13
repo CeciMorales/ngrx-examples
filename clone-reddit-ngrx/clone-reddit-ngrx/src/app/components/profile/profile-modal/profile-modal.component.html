@@ -1,0 +1,88 @@
+
+<mat-dialog-content>
+    <form [formGroup]="profileForm" class="example-form">
+        
+        <mat-form-field class="example-full-width" >
+            <input 
+                matInput 
+                type="text" 
+                placeholder="username"
+                formControlName="username" 
+                [ngModel]="editedProfile.username"
+                required
+            />       
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <textarea 
+                matInput 
+                type="text" 
+                placeholder="first name" 
+                formControlName="firstName" 
+                [ngModel]="editedProfile.firstName"
+                required>
+            </textarea>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <textarea 
+                matInput 
+                type="text"
+                placeholder="last name"
+                formControlName="lastName" 
+                [ngModel]="editedProfile.lastName"
+                required>
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input 
+                matInput 
+                type="text" 
+                placeholder="cover image"
+                formControlName="coverImage" 
+                [ngModel]="editedProfile.coverImage"
+                required
+            /> 
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input 
+                matInput 
+                type="text" 
+                placeholder="profile image"
+                formControlName="profileImage" 
+                [ngModel]="editedProfile.profileImage"
+                required
+            /> 
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input 
+                matInput 
+                type="text" 
+                placeholder="description"
+                formControlName="description" 
+                [ngModel]="editedProfile.description"
+                required
+            /> 
+        </mat-form-field>
+    </form>
+    
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="true">Cancel</button>
+    <div>
+        <button
+            type="submit" 
+            mat-raised-button color="primary" 
+            mat-dialog-close="false" 
+            (click)="editProfile()"
+            [disabled]="!profileForm.valid"
+            >Edit
+        </button>
+
+    </div>
+</mat-dialog-actions>
